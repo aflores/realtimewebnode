@@ -12,4 +12,15 @@ To run the server you'll need [Node.js](http://nodejs.org) and [Redis](http://re
 
 At this point you will be able to go to the address `http://localhost:8000/` in your web browser to interact with the app.
 
-How about adding a couple of redis commands?
+## Inserting messages into redis using redis-cli
+
+```
+$redis-cli
+
+LRANGE 0 -1
+
+LPUSH messages '{"name....}"
+
+
+to be continued...
+
