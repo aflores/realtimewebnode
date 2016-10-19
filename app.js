@@ -18,6 +18,10 @@ app.use(express.static(__dirname + '/public'));
  *  Handle all routes to the webserver
  */
 
+app.get('/pdf', function (req, res) {
+  res.sendfile(__dirname + '/public/RealTimeWebWithNodeCombined.pdf');
+});
+
 app.get('/*', function (req, res) {
   res.sendfile(__dirname + '/index.html');
 });
